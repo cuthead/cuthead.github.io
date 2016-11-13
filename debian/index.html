@@ -34,13 +34,10 @@ sudo groupadd fuse
 sudo usermod -aG fuse liujianwei
 when i connect iphone to debian,there is only camera option,click camera and i can see nothing.
 
-how to backup motherboard and video card bios by flashrom?
+how to backup motherboard bios by flashrom?
 su
 apt-get install flashrom
-successful
 flashrom -r motherboard.bin --programmer internal
-fail
-flashrom -r motherboard.bin --programmer gfxnvidia
 
 can debian 8.6.0 run skylake?
 skylake cpu is yes.
