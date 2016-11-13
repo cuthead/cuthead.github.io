@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>virtualbox</title>
+</head>
+<body>
+<pre>
+http://download.virtualbox.org/virtualbox/4.3.36/Oracle_VM_VirtualBox_Extension_Pack-4.3.36-105129.vbox-extpack
+按说这个时候已经搞定了。可是在USB列表里面却没有任何USB设备。
+原来是vbox 所在的用户组比如要包括当前用户才行。
+
+查看当前用户名：
+sharl@sharl-laptop:~$ whoami
+sharl
+
+查看vbox 所在的组：
+sharl@sharl-laptop:~$ cat /etc/group | grep vbox
+vboxusers:x:125:sharl
+
+将当前用户加入vbox组：
+usermod -a -G vboxusers sharl
+此时，重启系统。再次打开虚拟机，果然，USB设备都已经被识别、访问到了。
+
+input - keyboard - insert ctrl-alt-del
+settings - shared folders - auto-mount
+settings - storage - optical drive - choose virtual optical disk file
+left command
+devices - insert guest additions cd image
+settings - advanced - shared clipboard - bidirectional
+</pre>
+</body>
+</html>

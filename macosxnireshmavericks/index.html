@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>macosxnireshmavericks</title>
+</head>
+<body>
+<pre>
+download osx-mavericks.dmg
+download niresh mavericks usb version
+http://www.hackintosh.zone/downloads/download/75-niresh-mavericks-109-with-amd-intel-usb-iso/
+magnet:?xt=urn:btih:f25af6c430453832c08001518dd378e0a3ca85ee
+magnet:?xt=urn:btih:f25af6c430453832c08001518dd378e0a3ca85ee&dn=osx-mavericks.dmg
+ed2k://|file|osx-mavericks.dmg|5653921792|f789090803e9b2c8d582813c0d4a33bf|/
+md5:0224eaad6b9d4f7ca764b53ba9cbc9f1
+openssl sha1:e21339a1ebb166145d76c9e17e97d769ac5de94f
+
+windows 8.1 write osx-mavericks.dmg to cz48
+win32 disk imager select show all.select osx-mavericks.dmg select write
+os x write osx-mavericks.dmg to cz48
+diskutil unmountdisk /dev/"identifier"
+sudo dd if=/volumes/hdd/osx-mavericks.dmg of=/dev/disk2 bs=1m
+
+dd: /dev/disk2: resource busy
+cutheads-imac:~ cuthead$ diskutil unmount disk2s1
+volume untitled on disk2s1 unmounted
+press esc when boot computer,select usb flash driver
+select disk utility,format ssd as gpt
+
+select customize and select * options,unselect - options
+*boot-loader
+**chameleon
+***chameleon standard
+-graphics
+-install audio drivers (kexts)
+-install network drivers (kexts)
+*fakesmc and plugins
+**fakesmc
+**fakesmc plugins
+***acpi sensor
+***cpu sensor
+***lpc sensor
+***gpu sensor
+-boot-loader flags
+*chpipset drivers (kexts)
+**NullCPUPowerManagement
+-laptop drivers (kexts)
+-osx fixes
+-other optimizations
+
+finder open mavericks system drive slowly?enable load net folder in finder by edit auto master!
+sudo vi /etc/auto_master
+#/net
+esc :wq enter
+
+update osx vanilla applertc.kext and using chameleon cause reboot cmos reset?
+sudo perl -pi -e 's|\x75\x2e\x0f\xb6|\xeb\x2e\x0f\xb6|' /system/library/extensions/applertc.kext/contents/macos/applertc
+sudo touch /system/library/extensions
+
+ethernetbuiltin that doesn't work on org.chameleon.boot.plist?
+patch local0.txt,dtgp.txt,lan0.txt dsdt and put it to /extra folder
+
+diskutil mount disk0s1 mount clover efi partition fail?
+because niresh mavericks format efi paritition as hfs which proper one is fat32
+sudo -s
+fsck_hfs /dev/disk0s1
+mkdir /volumes/efi
+sudo mount -t hfs /dev/disk0s1 /volumes/efi
+mount_hfs /dev/disk0s1 /volumes/efi
+umount /volumes/efi
+
+how to set up mavericks
+don't log in icloud,trun on allow apps downloaded from anywhere to run app,turn off app store auto update,turn off sleep
+
+system crash after serveral mintues,maybe caused by applehpet.kext
+disabler or nullcpupowermanagement disable applehpet.kext to disable crash.
+
+bios boot to legacy clover,razer deathadder mouse works well,razer cynosa keyboard stop work,need unplug and plug razer deathadder to let it work,it is not relate to usb legacy mode,which is bios emulate ps/2 with usb,turn off usb legacy support doesn't effect clover deactive razer deathadder mouse,but keyboard doesn't work while press esc boot menu and chameleon select boot disk menu keyboard
+I can use chameleon instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost,but mac app store can't work because chameleon can't built in lan.and chameleon can't patch applertc
+
+how to show right grahpics processing unit name on about my mac?
+use chameleon and use gigabyte gtx 650 ti boost
+
+after install,desktop freeze crash after a while?
+don't use nullcpupowermanagement,instead of it use disabler
+
+after install,view online video blur?
+unplug niresh mavericks usb flash drive
+
+can't reach the welcome install screen?
+set ahci true,though you won't able to boot from dvd.
+
+sina chrome and pconline chrome flash plugin out of date?
+use google chrome only.
+
+shutdown fail,reboot fail?
+load optimized default bios settings and enable ahci only then reboot.
+
+what's the song when first boot?
+Yuvan Shankar Raja - Gangster
+
+plug usb freeze bios splash?
+format gpt to mbr
+
+can not shut down by install NullCPUPowerManagement.kext only?
+install dtgp hpet lan0 local0 shutdown sleep wak dsdt patches
+
+turn on ahci,can't boot from dvd?
+it's normal.
+
+git push fail?
+wifi set dns 114.114.114.114
+
+open with app icon represent fail?
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+mplayerx play video blur when boot mavericks from usb chameleon?
+usb chameleon can't inject gtx 650 ti boost,use ssd chameleon instead of because ssd chameleon can inject gtx 650 ti boost.
+</pre>
+</body>
+</html>
