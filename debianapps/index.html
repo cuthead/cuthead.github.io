@@ -6,7 +6,32 @@
 </head>
 <body>
 <pre>
-sudo apt-get libimobiledevice-utils gvfs-backends gvfs-bin gvfs-fuse nestopia install xboxdrv mame openarena torcs fcitx fcitx-table-wbpy git gstreamer1.0 nvidia-driver nvidia-xconfig libgl1-nvidia-glx:i386 unrar flashplugin-nonfree steam transmission
+onboard jmb363 disabled
+
+su
+vi /etc/apt/sources.list
+a
+shift-insert
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
+
+sudo apt-get update
+sudo apt-get install mame openarena torcs fcitx fcitx-table-wbpy git gstreamer1.0 unrar flashplugin-nonfree ktorrent
+reboot
+
+dpkg --add-architecture i386
+dpkg --remove-architecture i386
+sudo apt-get autoremove nestopia libimobiledevice-utils gvfs-backends gvfs-bin gvfs-fuse nvidia-driver nvidia-xconfig libgl1-nvidia-glx:i386 pepperflashplugin-nonfree chromium transmission zsnes
+apt-cache search pepper
+dpkg -l | grep i386
+apt-get purge steam zsnes
 </pre>
 </body>
 </html>
