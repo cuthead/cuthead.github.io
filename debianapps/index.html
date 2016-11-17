@@ -8,20 +8,37 @@
 <pre>
 gold install method
 install debian 8.6.0 every option default except write grub to ssd
-use cd as source
-sudo apt-get update
-sudo apt-get install git gstreamer1.0
+su
+vi /etc/apt/sources.list
+a
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
+
+deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
+deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
+
+shift-insert
+dpkg --add-architecture i386
+apt-get update
+apt-get install chromium git gstreamer1.0 fcitx-table-wbpy fcitx mame openarena torcs flashplugin-nonfree ktorrent unrar nestopia zsnes steam
 reboot
-https://www.google.com/intl/zh-CN/inputtools/try/
+use tsinghua as source so
+dpkg -l | grep fcitx | awk '{print $2}'
+fcitx-module-dbus, fcitx-ui-classic
+compatible nouveau with poor cz performance
 
 crap install method
 onboard jmb363 disabled
-dpkg --add-architecture i386
+use cd as source so
+dpkg -l | grep fcitx | awk '{print $2}'
+no fcitx-module-dbus, fcitx-ui-classic
 dpkg --remove-architecture i386
-sudo apt-get autoremove fcitx-table-wubi fcitx fcitx-sunpinyin fcitx-frontend-qt4 mame openarena fcitx-table-wbpy torcs flashplugin-nonfree ktorrent unrar nestopia libimobiledevice-utils gvfs-backends gvfs-bin gvfs-fuse nvidia-driver nvidia-xconfig libgl1-nvidia-glx:i386 pepperflashplugin-nonfree chromium transmission zsnes
-apt-cache search pepper
-dpkg -l | grep i386
-apt-get purge steam zsnes
+pt-get install fcitx-table-wubi fcitx-sunpinyin fcitx-frontend-qt4 libimobiledevice-utils gvfs-backends gvfs-bin gvfs-fuse nvidia-driver nvidia-xconfig libgl1-nvidia-glx:i386 pepperflashplugin-nonfree transmission zsnes
+incompatible nvidia-driver with good cz performance
 </pre>
 </body>
 </html>

@@ -6,6 +6,11 @@
 </head>
 <body>
 <pre>
+
+apt-cache search pepper
+dpkg -l | grep i386
+apt-get purge steam zsnes
+
 how to use ktorrent copy magnet link?
 click plugins - magnet generator
 
@@ -80,14 +85,6 @@ konqueror crashed without ua is the cause.
 
 A stop job is running for Avahi mDNS/DNS/SD Stack (0s / 1min 30s)?
 use default dns
-
-how to install steam?
-su
-dpkg --add-architecture i386
-apt-get update
-apt-get install steam
-do not install nvidia-driver because it cause log in fail
-do not install steam because cz smoke is freeze by nouveau.
 
 how to enable konqueror html5 hardware acceleration for bilibili html5?
 su
@@ -241,21 +238,8 @@ press a
 
 how to install Flash?
 su
-vi /etc/apt/sources.list
-a
-shift-insert
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
-
-apt-get update
-apt-get install flashplugin-nonfree
+https://get.adobe.com/flashplayer/
+cp /home/liujianwei/Downloads/flash_player_ppapi_linux.x86_64/libpepflashplayer.so /usr/lib/mozilla/plugins/
 
 Oracle VM VirtualBox Extension Pack links for Debian 8.6.0?
 http://download.virtualbox.org/virtualbox/4.3.36/Oracle_VM_VirtualBox_Extension_Pack-4.3.36-105129.vbox-extpack
