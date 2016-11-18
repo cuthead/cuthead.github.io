@@ -64,24 +64,24 @@ o.c. fail retry counter 1
 o.c. fail cmos reload disabled
 cpu clock ratio 9 x
 cpu n/2 ratio disabled
-target cpu clock 2997 mhz
-cpu clock 333 mhz
+target cpu clock 3150 mhz
+cpu clock 350 mhz
 boot up clock auto
 cpu clock amplitude 800mv
 cpu clock0 skew 0ps
 cpu clock1 skew 0ps
-dram speed auto
-target dram speed ddr2 800
+dram speed 400/800
+target dram speed ddr2 700
 pcie clock 100 mhz
 cpu spread specturm disabled
 pcie spread spectrum disabled
 
 cpu feature
 
-thermal management control:enable
-ppm(eist) mode:enable
+thermal management control:disable
+ppm(eist) mode:disable
 limit cpuid maxval:disable
-c1e function:enable
+c1e function:disable
 execute disable bit:enable
 virtualization technology:enable
 core multi-processing:enable
@@ -113,9 +113,9 @@ all pre to refresh:auto
 voltage setting
 
 cpu vid special add:auto
-dram voltage control:1.908v
+dram voltage control:2.100v
 sb core/cpu pll voltage:1.55v
-nb core voltage:1.1825v
+nb core voltage:1.2700v
 cpu vtt voltage:1.24v
 vcore droop control:enable
 clockgen voltage control:3.45v
