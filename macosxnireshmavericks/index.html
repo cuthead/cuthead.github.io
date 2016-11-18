@@ -19,13 +19,11 @@ windows 8.1 write osx-mavericks.dmg to cz48
 win32 disk imager select show all.select osx-mavericks.dmg select write
 os x write osx-mavericks.dmg to cz48
 diskutil unmountdisk /dev/"identifier"
-sudo dd if=/volumes/hdd/osx-mavericks.dmg of=/dev/disk2 bs=1m
-
+sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1m
 dd: /dev/disk2: resource busy
-cutheads-imac:~ cuthead$ diskutil unmount disk2s1
+diskutil unmount disk1s1
 volume untitled on disk2s1 unmounted
 press esc when boot computer,select usb flash driver
-select disk utility,format ssd as gpt
 
 select customize and select * options,unselect - options
 *boot-loader
