@@ -18,12 +18,13 @@ openssl sha1:e21339a1ebb166145d76c9e17e97d769ac5de94f
 windows 8.1 write osx-mavericks.dmg to cz48
 win32 disk imager select show all.select osx-mavericks.dmg select write
 os x write osx-mavericks.dmg to cz48
-diskutil unmountdisk /dev/"identifier"
 sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1m
 dd: /dev/disk2: resource busy
 diskutil unmount disk1s1
 volume untitled on disk2s1 unmounted
 press esc when boot computer,select usb flash driver
+sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1m
+fail,maybe bad cz48
 
 select customize and select * options,unselect - options
 *boot-loader
@@ -41,7 +42,9 @@ select customize and select * options,unselect - options
 ***gpu sensor
 -boot-loader flags
 *chpipset drivers (kexts)
-**NullCPUPowerManagement
+**niresh's fixed chipset kexts
+**chipset drivers
+***NullCPUPowerManagement
 -laptop drivers (kexts)
 -osx fixes
 -other optimizations
@@ -73,44 +76,30 @@ don't log in icloud,trun on allow apps downloaded from anywhere to run app,turn 
 system crash after serveral mintues,maybe caused by applehpet.kext
 disabler or nullcpupowermanagement disable applehpet.kext to disable crash.
 
-bios boot to legacy clover,razer deathadder mouse works well,razer cynosa keyboard stop work,need unplug and plug razer deathadder to let it work,it is not relate to usb legacy mode,which is bios emulate ps/2 with usb,turn off usb legacy support doesn't effect clover deactive razer deathadder mouse,but keyboard doesn't work while press esc boot menu and chameleon select boot disk menu keyboard
-I can use chameleon instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost,but mac app store can't work because chameleon can't built in lan.and chameleon can't patch applertc
+what about razer?
+bios boot legacy clover,razer deathadder mouse works well,razer cynosa keyboard stop work,need unplug and plug razer deathadder to let it work,it is not relate to usb legacy mode,which is bios emulate ps/2 with usb,turn off usb legacy support doesn't effect clover deactive razer deathadder mouse,but keyboard doesn't work while press esc boot menu and chameleon select boot disk menu keyboard
+use chameleon instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost
+
+how to fix mac app store and shutdown and sleep?
+maciasl open DTGP.txt LAN0.txt Local0.txt Shutdown.txt Sleep.txt WAK.txt
 
 how to show right grahpics processing unit name on about my mac?
 use chameleon and use gigabyte gtx 650 ti boost
 
-after install,desktop freeze crash after a while?
-don't use nullcpupowermanagement,instead of it use disabler
-
-after install,view online video blur?
-unplug niresh mavericks usb flash drive
-
-can't reach the welcome install screen?
-set ahci true,though you won't able to boot from dvd.
-
-sina chrome and pconline chrome flash plugin out of date?
-use google chrome only.
-
-shutdown fail,reboot fail?
-load optimized default bios settings and enable ahci only then reboot.
+after install i can't reach the welcome screen?
+set ahci true,though you won't able to boot from cd.
 
 what's the song when first boot?
 Yuvan Shankar Raja - Gangster
 
 plug usb freeze bios splash?
-format gpt to mbr
+format usb gpt to mbr
 
 can not shut down by install NullCPUPowerManagement.kext only?
 install dtgp hpet lan0 local0 shutdown sleep wak dsdt patches
 
-turn on ahci,can't boot from dvd?
-it's normal.
-
-git push fail?
-wifi set dns 114.114.114.114
-
-open with app icon represent fail?
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+turn on ahci,can't boot from cd?
+it's normal.turn off for ahci boot from cd,turn on ahci for boot from ssd.
 
 mplayerx play video blur when boot mavericks from usb chameleon?
 usb chameleon can't inject gtx 650 ti boost,use ssd chameleon instead of because ssd chameleon can inject gtx 650 ti boost.
