@@ -15,7 +15,7 @@ ide channel 0 sandisk sdssdhp128g
 ide channel 0 tsstcorp cddvdw sh-2
 ide channel 1 none
 ide channel 1 none
-drive a 1.44m,3.5in
+drive a none
 video ega/vga
 halt on all errors
 base memory 639k
@@ -58,20 +58,20 @@ cpu feature press enter
 dram timing press enter
 voltage setting press enter
 exit setup shutdown mode 2
-shutdown after ac loss enabled
-ac shutdown free enabled
+shutdown after ac loss disabled
+ac shutdown free disabled
 o.c. fail retry counter 1
 o.c. fail cmos reload disabled
 cpu clock ratio 9 x
 cpu n/2 ratio disabled
-target cpu clock 3150 mhz
-cpu clock 350 mhz
+target cpu clock 3600 mhz
+cpu clock 400 mhz
 boot up clock auto
-cpu clock amplitude 800mv
+cpu clock amplitude 1000mv
 cpu clock0 skew 0ps
 cpu clock1 skew 0ps
 dram speed 400/800
-target dram speed ddr2 700
+target dram speed ddr2 800
 pcie clock 100 mhz
 cpu spread specturm disabled
 pcie spread spectrum disabled
@@ -88,9 +88,9 @@ core multi-processing:enable
 
 dram timing
 
-enhance data transmitting:auto
-enhance addressing:auto
-t2 dispatch:auto
+enhance data transmitting:normal
+enhance addressing:normal
+t2 dispatch:disable
 clock setting fine delay press enter
 flex memory mode:auto
 cas latency time (tcl):auto
@@ -112,17 +112,17 @@ all pre to refresh:auto
 
 voltage setting
 
-cpu vid special add:auto
+cpu vid special add:＋100mv
 dram voltage control:2.100v
 sb core/cpu pll voltage:1.55v
 nb core voltage:1.2700v
 cpu vtt voltage:1.24v
-vcore droop control:enable
-clockgen voltage control:3.45v
+vcore droop control:disable
+clockgen voltage control:3.85v
 cpu gtl 0/2 ref volt:0.67x
 cpu gtl 1/3 ref volt:0.67x
 north bridge gtl ref volt:0.67x
-fsb vref:auto
+fsb vref:00
 
 integrated peripherals
 
@@ -133,9 +133,15 @@ usb device setting press enter
 
 onchip ide device
 
-sata mode ide
+sata mode ahci
 legacy mode support disabled
 onboard jmb363 disabled
+
+onboard device
+
+onboard lan enabled
+onboard hd audio disabled
+onboard lan pxe disabled
 
 super io device
 
@@ -144,9 +150,9 @@ power on by keyboard disabled
 power on by button enabled
 kb power on password enter
 hot key power on ctrl-f1
-onboard fdc controller enabled
-onboard serial port 1 3f8/irq4
-onboard serial port 2 2f8/irq3
+onboard fdc controller disabled
+onboard serial port 1 disabled
+onboard serial port 2 disabled
 uart mode select irda
 pwron after pwr-fail off
 cir port address disabled
