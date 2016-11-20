@@ -6,18 +6,18 @@
 </head>
 <body>
 <pre>
-download install os x mavericks.app
-10.12.1 (16a319) installesd.dmg md5
-dac5e971befd7a7fbcc60a4be5313d88
 create a bootable installer for os x
-sudo /applications/install\ macos\ sierra.app/contents/resources/createinstallmedia --volume /volumes/myvolume --applicationpath /applications/install\ macos\ sierra.app
-download clover and install clover
-standard install - change install location - install macos sierra - continue
-customize - install clover in the esp bootloader - install boot0af in mbr cloverefi - cloverefi 64-bits sata
-install
-copy dsdt.aml to /volumes/esp/efi/clover/acpi/patched,copy fakesmc.kext and applealc.kext to /volumes/esp/efi/clover/kexts/10.12,config.plist to /volumes/esp/efi/clover/
+sudo /Applications/Install\ macOS\ Sierra.app/contents/resources/createinstallmedia --volume /volumes/Myvolume --applicationpath /Applications/Install\ macOS\ Sierra.app
+
+install clover
+select UEFI
+
+install kexts
+diskutil mount disk1s1
+cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
+cp RealtekR1000SL.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
+
 install sierra
-reboot,press esc,select sandisk,enter,select install macos sierra,select english,until the last second wait for 5 minutes,reboot,press esc,select sandisk,enter,select install macos sierra,the last second won't wait for 5 minutes,install complete,repeat usb clover steps to install ssd clover
 </pre>
 </body>
 </html>

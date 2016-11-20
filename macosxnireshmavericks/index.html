@@ -20,10 +20,17 @@ win32 disk imager select show all.select osx-mavericks.dmg select write
 os x write osx-mavericks.dmg to cz48
 diskutil list
 diskutil unmountdisk disk1
+
 sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1024
 5521408+0 records in
 5521408+0 records out
 5653921792 bytes transferred in 3967.620496 secs (1425016 bytes/sec)
+
+cutheaddeMac-Pro:~ cuthead$ sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1024
+Password:
+5521408+0 records in
+5521408+0 records out
+5653921792 bytes transferred in 6068.598753 secs (931668 bytes/sec)
 
 press esc when boot computer,select usb flash drive
 
