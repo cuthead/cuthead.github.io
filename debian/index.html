@@ -6,10 +6,20 @@
 </head>
 <body>
 <pre>
+how to play counter strike?
+dpkg --add-architecture i386
+apt-get update
+apt-get install steam
+incompatible nvidia-driver with good cz performance
+compatible nouveau with poor cz performance
+gallium3d with good cz performance
 
+how to remove games?
 apt-cache search pepper
 dpkg -l | grep i386
 apt-get purge steam zsnes
+rm -rf /home/liujianwei/.local/share/applications/*
+rm -rf /home/liujianwei/.steam/*
 
 how to use ktorrent copy magnet link?
 click plugins - magnet generator
@@ -80,66 +90,15 @@ uname -a
 how to list partition?
 lsblk
 
-why konqueror crashed?
-konqueror crashed without ua is the cause.
-
-A stop job is running for Avahi mDNS/DNS/SD Stack (0s / 1min 30s)?
-use default dns
-
-how to enable konqueror html5 hardware acceleration for bilibili html5?
-su
-apt-get install nvidia-driver nvidia-xconfig
-reboot
-
-
-bilibili no html option on konqueror?
-su
-reboot
-
-
-Konqueror 4.14.2 no sound on youtube?
-su
-apt-get install gstreamer1.0
-reboot
-
 
 how to burn my cuthead.github.io into dvd to avoid jinsha delete it?
 insert blank dvd-r,do not using dolphin to burn dvd-r because dolphin can't do that,debian will auto open k3b,click burn k3b will be auto in multi free time burn,so I can burn 700 times.I can replaced cuthead.github.io by cuthead.github.io freely,because k3b will auto replace the cuthead.github.io to new one.
 
 why konqueror search box doesn't work?
-because china block all search engine except baidu.
+because china block all search engine except yahoo.
 
 why click launcher konqueror start page doesn't work?
 because launcher konqueror script is bad,but favourite konqueror is good.
-
-how to change language from english to chinese?
-it is impossbile for me to change language.
-it is impossbile for me to see no english on debian.
-it is possbile for me to see no chinese on debian.
-
-liujianwei@debian:~$ env | grep LANG
-LANG=en_US.utf8
-GDM_LANG=en_US.utf8
-liujianwei@debian:~$ export LANG=zh_cn.UTF-8
-liujianwei@debian:~$ dpkg-reconfigure locales
-bash: dpkg-reconfigure: command not found
-liujianwei@debian:~$ export LANG=en-^CTF-8
-liujianwei@debian:~$ env | grep LANG
-LANG=zh_cn.UTF-8
-GDM_LANG=en_US.utf8
-liujianwei@debian:~$ export LANG=en-US.UTF-8
-liujianwei@debian:~$ env | grep LANG
-LANG=en-US.UTF-8
-GDM_LANG=en_US.utf8
-liujianwei@debian:~$
-liujianwei@debian:~$ su
-Password:
-root@debian:/home/liujianwei# apt-get install dpkg-reconfigure
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-E: Unable to locate package dpkg-reconfigure
-root@debian:/home/liujianwei# 
 
 
 why can't copy file to formated usb flash drive?
@@ -207,43 +166,14 @@ gnome-session --version
 dpkg -l | grep firefox
 dpkg -s firefox-esr
 
-Debian chinese character ugly?
-use united states letters
-
-how to fix apt-get install nvidia-driver ignore request modify xorg cause boot fail?
-use nouveau instead of nvidia driver
-
-how about using ubuntu?
-ubuntu reboot sometimes fail,debian reboot always well?
-click ubuntu option quickly cause 
-replace ubuntu with debian
-
-how to install chinese fcitx on gnome??
-apt-get install fcitx fcitx-table-wbpy
-
-# install successful
-
-fcitx-config-geforce gtk3
-
-# it's empty,can't find fcitx-table-wbpy
-
-im-config
-
-# click default option. 
-
-reboot
-
 vi add text to tail?
 press a
 
 how to let debian install chromium for flash?
-
 apt-get remove chromium
-
 chromium doesn't include flash
 
 KDE Konsole to select text and copy to clipboard?
-
 Konsole can copy with ctrl + shift + c, and paste with ctrl + shift + v
 
 
@@ -300,7 +230,6 @@ how to reinstall nouveau and fcitx in easy way?
 reinstall chinese debian 8.6.0
 
 how to install fcitx in KDE?
-
 su
 vi /etc/apt/sources.list
 a
@@ -320,13 +249,11 @@ reboot
 right click keyboard
 configure current input method
 wubipinyin
+dpkg -l | grep fcitx | awk '{print $2}'
+fcitx-module-dbus, fcitx-ui-classic
 
 how to force to empty trash?
 rm -rf /home/liujianwei/.local/share/Trash/files/*
-
-how to force to uninstall steam?
-rm -rf /home/liujianwei/.local/share/applications/*
-rm -rf /home/liujianwei/.steam/*
 
 how to force to uninstall flashplug-nonfree?
 rm -rf /usr/lib/mozilla/plugins/*

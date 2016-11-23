@@ -6,7 +6,6 @@
 </head>
 <body>
 <pre>
-gold install method
 install debian 8.6.0 every option default except write grub to ssd
 su
 vi /etc/apt/sources.list
@@ -24,21 +23,8 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib 
 shift-insert
 dpkg --add-architecture i386
 apt-get update
-apt-get install git gstreamer1.0 fcitx-table-wbpy fcitx mame openarena torcs flashplugin-nonfree ktorrent unrar nestopia zsnes steam xboxdrv
+apt-get install git gstreamer1.0 fcitx-table-wbpy fcitx fcitx-mozc mame openarena torcs flashplugin-nonfree ktorrent unrar nestopia zsnes steam xboxdrv
 reboot
-use tsinghua as source so
-dpkg -l | grep fcitx | awk '{print $2}'
-fcitx-module-dbus, fcitx-ui-classic
-compatible nouveau with poor cz performance
-
-crap install method
-onboard jmb363 disabled
-use cd as source so
-dpkg -l | grep fcitx | awk '{print $2}'
-no fcitx-module-dbus, fcitx-ui-classic
-dpkg --remove-architecture i386
-apt-get install chromium fcitx-table-wubi fcitx-sunpinyin fcitx-frontend-qt4 libimobiledevice-utils gvfs-backends gvfs-bin gvfs-fuse nvidia-driver nvidia-xconfig libgl1-nvidia-glx:i386 pepperflashplugin-nonfree transmission zsnes
-incompatible nvidia-driver with good cz performance
 </pre>
 </body>
 </html>
