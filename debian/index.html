@@ -6,6 +6,10 @@
 </head>
 <body>
 <pre>
+how to mount efi?
+mkdir /mnt/efi
+mount /dev/sdb1 /mnt/efi
+
 how to install amd proprietary driver instead of vmware driver?
 aptitude -r install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') fglrx-driver
 aticonfig --initial
@@ -21,7 +25,7 @@ gallium3d with good cz performance
 how to remove games?
 apt-cache search pepper
 dpkg -l | grep i386
-apt-get purge steam zsnes
+apt-get purge steam
 rm -rf /home/liujianwei/.local/share/applications/*
 rm -rf /home/liujianwei/.steam/*
 
@@ -234,9 +238,6 @@ git clone https://github.com/cuthead/cuthead.github.io.git
 
 chown liujianwei:liujianwei -R cuthead.github.io
 
-how to reinstall nouveau and fcitx in easy way?
-reinstall chinese debian 8.6.0
-
 how to install fcitx in KDE?
 su
 vi /etc/apt/sources.list
@@ -252,11 +253,11 @@ deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-
 deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
 
 shift-insert
-apt-get install fcitx fcitx-table-wbpy fcitx-mozc
+apt-get install fcitx fcitx-sunpinyin fcitx-mozc
 reboot
 right click keyboard
-configure current input method
-wubipinyin
+input method
+sunpinyin
 dpkg -l | grep fcitx | awk '{print $2}'
 fcitx-module-dbus, fcitx-ui-classic
 
