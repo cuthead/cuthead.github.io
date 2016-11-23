@@ -6,6 +6,10 @@
 </head>
 <body>
 <pre>
+how to install amd proprietary driver instead of vmware driver?
+aptitude -r install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') fglrx-driver
+aticonfig --initial
+
 how to play counter strike?
 dpkg --add-architecture i386
 apt-get update
@@ -100,6 +104,10 @@ because china block all search engine except yahoo.
 why click launcher konqueror start page doesn't work?
 because launcher konqueror script is bad,but favourite konqueror is good.
 
+why konqueror audio doesn't work? 
+su
+apt-get install gstreamer1.0
+reboot
 
 why can't copy file to formated usb flash drive?
 unplug and plug usb flash drive again.
