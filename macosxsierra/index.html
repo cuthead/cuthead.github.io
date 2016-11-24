@@ -7,7 +7,7 @@
 <body>
 <pre>
 create a bootable installer for os x
-sudo /Applications/Install\ macOS\ Sierra.app/contents/resources/createinstallmedia --volume /volumes/Myvolume --applicationpath /Applications/Install\ macOS\ Sierra.app
+sudo /Applications/Install\ macOS\ Sierra.app/contents/resources/createinstallmedia --volume /volumes/MyVolume --applicationpath /Applications/Install\ macOS\ Sierra.app
 
 install clover
 select UEFI
@@ -17,15 +17,23 @@ diskutil mount disk1s1
 cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 cp RealtekR1000SL.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 
-install sierra by using radeon hd6870,with mx 400 radeon 9550 gtx 260 gtx 650 ti boost install 10.12 will fail.install 10.12 in p45,replace p45 with h61 should work without reinstall.razer cynosa does not work with 10.12 and clover.mb110ll and razer deathadder should work with 10.12 and clover.only p45 the first two USB port is working.
-DFI-DK-P45-T2RS-PLUS Core-2-Q9650, Radeon HD6870, ALC885 10.12.1 (16B2657)
-GA-H61M-DS2 i3-3240, Radeon HD6870, ALC887 10.12.1 (16B2657)
+install sierra by using radeon hd6870,with mx 400 radeon 9550 gtx 260 gtx 650 ti boost install 10.12 will fail.install 10.12 in p45,replace p45 with h61 can not work without reinstall.
 
 nvidia is sloppy,radeon and i3 is god.
+
 sse2 is 32 bit,sse3 is 64 bit,ssse3 is 128 bit which is needed for osx86,amd64 and sse4 and sse5 does not exist.
-Mb110ll is the only working peripheral on osx86,so plug razer deathadder on the left,plug syba sd-cm-uaud on the right for enable both p45 bios setup and osx86.
+
+Mb110ll is the only working peripheral on osx86 on p45,so plug razer deathadder on the left,plug syba sd-cm-uaud on the right for enable both p45 bios setup and osx86 p45.
 
 repalce hd6870 with gtx650tiboost i got prohibit sign,in verbose it say kernel cache fail.reinstall i got prohibit sign,in verbose it say system time.
+
+i get dfi-dk-p45-t2rs-plus,it works with old and last legacy clover and old chameleon and sierra,but it doesn't work with old uefi clover and razer deathadder and cynosa.
+
+i get ga-h61m-ds2,it works with old uefi clover and razer deathadder and cynosa and old chameleon boot installer,but it doesn't work with old and last legacy clover and last uefi clover and sierra and old chameleon boot mavericks.
+
+i3-3240, GA-H61M-DS2, H61, AHCI no IDE, Radeon HD6870, CM119, RTL8111E, 10.12.1 (16B2657)
+
+legacy efi does not work with h61,efi work with h61
 </pre>
 </body>
 </html>
