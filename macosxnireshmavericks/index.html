@@ -6,6 +6,7 @@
 </head>
 <body>
 <pre>
+ga-h61m-ds2,i3-3240,geforce gtx 650 ti boost,cm119,10.9 (13a603)
 download osx-mavericks.dmg
 download niresh mavericks usb version
 http://www.hackintosh.zone/downloads/download/75-niresh-mavericks-109-with-amd-intel-usb-iso/
@@ -36,10 +37,10 @@ press esc when boot computer,select usb flash drive
 
 select customize and select * options,unselect - options
 *boot-loader
-**chameleon
-***chameleon standard
+**clover
+***clover uefi
 -graphics
--install audio drivers (kexts)
+*install audio drivers (kexts)
 -install network drivers (kexts)
 *fakesmc and plugins
 **fakesmc
@@ -87,12 +88,10 @@ disabler or nullcpupowermanagement disable applehpet.kext to disable crash.
 what about razer?
 bios boot legacy clover,razer deathadder mouse works well,razer cynosa keyboard stop work,need unplug and plug razer deathadder to let it work,it is not relate to usb legacy mode,which is bios emulate ps/2 with usb,turn off usb legacy support doesn't effect clover deactive razer deathadder mouse,but keyboard doesn't work while press esc boot menu and chameleon select boot disk menu keyboard
 use chameleon instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost
+use clover uefi instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost
 
 how to fix mac app store and shutdown and sleep?
 maciasl open DTGP.txt LAN0.txt Local0.txt Shutdown.txt Sleep.txt WAK.txt
-
-how to show right grahpics processing unit name on about my mac?
-use chameleon and use gigabyte gtx 650 ti boost
 
 after install i can't reach the welcome screen?
 set ahci true,though you won't able to boot from cd.
@@ -113,13 +112,13 @@ mplayerx play video blur when boot mavericks from usb chameleon?
 usb chameleon can't inject gtx 650 ti boost,use ssd chameleon instead of because ssd chameleon can inject gtx 650 ti boost.
 
 如何自动设置五笔输入法？
-安装第一次启动，键盘选择中国
+安装第一次启动，键盘选择香港
 
 why can't boot from niresh cd,even i disable ahci?
 niresh biside ubuntu cd and separate niresh cd is good,but the cz48 is bad,niresh bisde win10 bootable cd is good.
 
 why update to 10.9.5 then boot from ssd fail,screen turn black?
-maybe apprtc problem.
-</pre>
+use clover uefi instead of chameleon
+s</pre>
 </body>
 </html>
