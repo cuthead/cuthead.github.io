@@ -16,35 +16,22 @@ git config --global user.name "cuthead"
 git add -A
 git commit -m "update"
 git push
-
 wait for several mintues
 
 how to blog on coding.net
-login coding.net,create cuthead repository
-git clone https://git.coding.net/cuthead/cuthead.git
-create howtoblog folder in downloaded cuthead.github.io folder or cuthead folder
-cd ~/cuthead
 git config --global user.email "cuthead@qq.com"
-git config --global user.name "cuthead"
+git config --global push.default simple
+git clone https://git.coding.net/cuthead/cuthead.git
+git pull origin coding-pages
 git checkout -b coding-pages
-git push origin coding-pages
-git push --set-upstream origin coding-pages
-https://coding.net/u/cuthead/p/cuthead/git/pages
-https://coding.net/help/doc/pages/index.html
 git add -A
 git commit -m "update"
-git push
-
+git push -f --set-upstream origin coding-pages
 page服务
 立即开启
-
-wait for several mintues
-
-download cuthead.coding.me blog
-git clone https://git.coding.net/cuthead/cuthead.git
-git checkout -b coding-pages
-git pull origin coding-pages
-git push --set-upstream origin coding-pages
+wait for several minutes
+https://coding.net/u/cuthead/p/cuthead/git/pages
+https://coding.net/help/doc/pages/index.html
 </pre>
 </body>
 </html>
