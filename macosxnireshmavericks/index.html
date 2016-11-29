@@ -6,13 +6,8 @@
 </head>
 <body>
 <pre>
-i get dfi-dk-p45-t2rs-plus,it works with old and last legacy clover and old chameleon and sierra,but it doesn't work with old uefi clover and razer deathadder and cynosa.
+mavericks
 
-i get ga-h61m-ds2,it works with old uefi clover and razer deathadder and cynosa and old chameleon boot installer,but it doesn't work with old and last legacy clover and last uefi clover and sierra and old chameleon boot mavericks.
-
-i3-3240, GA-H61M-DS2,  H61, AHCI no IDE, Radeon HD6870, CM119, RTL8111E, Mavericks 10.9.0 (13A603) + Niresh UEFI
-
-download osx-mavericks.dmg
 download niresh mavericks usb version
 http://www.hackintosh.zone/downloads/download/75-niresh-mavericks-109-with-amd-intel-usb-iso/
 magnet:?xt=urn:btih:f25af6c430453832c08001518dd378e0a3ca85ee
@@ -27,26 +22,18 @@ os x write osx-mavericks.dmg to cz48
 diskutil list
 diskutil unmountdisk disk1
 
-sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1024
-5521408+0 records in
-5521408+0 records out
-5653921792 bytes transferred in 3967.620496 secs (1425016 bytes/sec)
-
-cutheaddeMac-Pro:~ cuthead$ sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=1024
-Password:
-5521408+0 records in
-5521408+0 records out
-5653921792 bytes transferred in 6068.598753 secs (931668 bytes/sec)
-
-press esc when boot computer,select usb flash drive
+sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=8192
+690176+0 records in
+690176+0 records out
+5653921792 bytes transferred in 2641.905551 secs (2140092 bytes/sec)press esc when boot computer,select usb flash drive
 
 select customize and select * options,unselect - options
 *boot-loader
 **clover
 ***clover uefi
 -graphics
-*install audio drivers (kexts)
--install network drivers (kexts)
+-install audio drivers (kexts)
+*install network drivers (kexts)
 *fakesmc and plugins
 **fakesmc
 **fakesmc plugins
@@ -73,7 +60,7 @@ sudo perl -pi -e 's|\x75\x2e\x0f\xb6|\xeb\x2e\x0f\xb6|' /system/library/extensio
 sudo touch /system/library/extensions
 
 ethernetbuiltin that doesn't work on org.chameleon.boot.plist?
-patch local0.txt,dtgp.txt,lan0.txt dsdt and put it to /extra folder
+use uefi clover
 
 diskutil mount disk0s1 mount clover efi partition fail?
 because niresh mavericks format efi paritition as hfs which proper one is fat32
@@ -84,46 +71,26 @@ sudo mount -t hfs /dev/disk0s1 /volumes/efi
 mount_hfs /dev/disk0s1 /volumes/efi
 umount /volumes/efi
 
-how to set up mavericks
-don't log in icloud,trun on allow apps downloaded from anywhere to run app,turn off app store auto update,turn off sleep
-
 system crash after serveral mintues,maybe caused by applehpet.kext
 disabler or nullcpupowermanagement disable applehpet.kext to disable crash.
-
-what about razer?
-bios boot legacy clover,razer deathadder mouse works well,razer cynosa keyboard stop work,need unplug and plug razer deathadder to let it work,it is not relate to usb legacy mode,which is bios emulate ps/2 with usb,turn off usb legacy support doesn't effect clover deactive razer deathadder mouse,but keyboard doesn't work while press esc boot menu and chameleon select boot disk menu keyboard
-use chameleon instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost
-use clover uefi instead of,because it works on razer deathadder mouse and razer cynosa keyboard,and it works on gtx 650 ti boost
 
 how to fix mac app store and shutdown and sleep?
 maciasl open DTGP.txt LAN0.txt Local0.txt Shutdown.txt Sleep.txt WAK.txt
 
 after install i can't reach the welcome screen?
-set ahci true,though you won't able to boot from cd.
+set ahci true,though you won't able to boot from cd for dfi dk p45 t2rs plus,but it does not matter ga h61m-ds2.
 
 what's the song when first boot?
 Yuvan Shankar Raja - Gangster
 
-plug usb freeze bios splash?
-format usb gpt to mbr
-
-can not shut down by install NullCPUPowerManagement.kext only?
-install dtgp hpet lan0 local0 shutdown sleep wak dsdt patches
-
-turn on ahci,can't boot from cd?
-it's normal.turn off for ahci boot from cd,turn on ahci for boot from ssd.
-
-mplayerx play video blur when boot mavericks from usb chameleon?
-usb chameleon can't inject gtx 650 ti boost,use ssd chameleon instead of because ssd chameleon can inject gtx 650 ti boost.
+plug usb freeze bios splash for dfi dk p45 t2rs plus?
+format usb gpt to mbr for dfi dk p45 t2rs plus
 
 如何自动设置五笔输入法？
 安装第一次启动，键盘选择香港
 
-why can't boot from niresh cd,even i disable ahci?
-niresh biside ubuntu cd and separate niresh cd is good,but the cz48 is bad,niresh bisde win10 bootable cd is good.
-
-why update to 10.9.5 then boot from ssd fail,screen turn black?
-use clover uefi instead of chameleon
-s</pre>
+how to update?
+use uefi clover
+</pre>
 </body>
 </html>

@@ -6,34 +6,69 @@
 </head>
 <body>
 <pre>
+sierra
+
 create a bootable installer for os x
+
 sudo /Applications/Install\ macOS\ Sierra.app/contents/resources/createinstallmedia --volume /volumes/MyVolume --applicationpath /Applications/Install\ macOS\ Sierra.app
 
-install clover
-select UEFI
+Install for UEFI booting only
+Install Clover in the ESP
+Drivers64UEFI
+OsxAptioFixDrv-64
 
 install kexts
 diskutil mount disk1s1
 cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 cp RealtekR1000SL.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 
-install sierra by using radeon hd6870,with mx 400 radeon 9550 gtx 260 gtx 650 ti boost install 10.12 will fail.install 10.12 in p45,replace p45 with h61 can not work without reinstall.
+usb
+# Rename USB devices for OSX 10.11 Support (remember to use injector with this)
+#
+into device label EHC1 set_label begin EH01 end;
+into device label EHC2 set_label begin EH02 end;
+into device label XHC1 set_label begin XHC end;
+into_all all code_regex EHC1 replaceall_matched begin EH01 end;
+into_all all code_regex EHC2 replaceall_matched begin EH02 end;
+into_all all code_regex XHC1 replaceall_matched begin XHC end;
 
-nvidia is sloppy,radeon and i3 is god.
-
-sse2 is 32 bit,sse3 is 64 bit,ssse3 is 128 bit which is needed for osx86,amd64 and sse4 and sse5 does not exist.
-
-Mb110ll is the only working peripheral on osx86 on p45,so plug razer deathadder on the left,plug syba sd-cm-uaud on the right for enable both p45 bios setup and osx86 p45.
-
-repalce hd6870 with gtx650tiboost i got prohibit sign,in verbose it say kernel cache fail.reinstall i got prohibit sign,in verbose it say system time.
-
-i get dfi-dk-p45-t2rs-plus,it works with old and last legacy clover and old chameleon and sierra,but it doesn't work with old uefi clover and razer deathadder and cynosa.
-
-i get ga-h61m-ds2,it works with old uefi clover and razer deathadder and cynosa and old chameleon boot installer,but it doesn't work with old and last legacy clover and last uefi clover and sierra and old chameleon boot mavericks.
-
-i3-3240, GA-H61M-DS2, H61, AHCI no IDE, Radeon HD6870, CM119, RTL8111E, 10.12.1 (16B2657)
-
-legacy efi does not work with h61,efi work with h61
+	<key>ACPI</key>
+	<dict>
+		<key>DSDT</key>
+		<dict>
+			<key>Patches</key>
+			<array>
+				<dict>
+					<key>Comment</key>
+					<string></string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string></string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMg==
+					</data>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 </pre>
 </body>
 </html>
