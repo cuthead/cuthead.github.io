@@ -6,7 +6,73 @@
 </head>
 <body>
 <pre>
+buy a PC that can run niresh-mavericks,for example
+
 i3-3240, GA-H61M-DS2, Radeon HD6870, HS-100B, RTL8111E
+
+ed2k://|file|osx-mavericks.dmg|5653921792|f789090803e9b2c8d582813c0d4a33bf|/
+
+windows 8.1 write osx-mavericks.dmg to cz48
+
+win32 disk imager select show all.select osx-mavericks.dmg select write
+
+os x write osx-mavericks.dmg to cz48
+
+diskutil list
+
+diskutil unmountdisk disk1
+
+sudo dd if=/Users/cuthead/Desktop/osx-mavericks.dmg of=/dev/disk1 bs=8192
+
+690176+0 records in
+
+690176+0 records out
+
+5653921792 bytes transferred in 2641.905551 secs (2140092 bytes/sec)press esc when boot computer,select usb flash drive 
+
+select customize and select * options,unselect - options
+
+*boot-loader
+
+**clover
+
+***clover uefi
+
+-graphics
+
+-install audio drivers (kexts)
+
+*install network drivers (kexts)
+
+*fakesmc and plugins
+
+**fakesmc
+
+**fakesmc plugins
+
+***acpi sensor
+
+***cpu sensor
+
+***lpc sensor
+
+***gpu sensor
+
+-boot-loader flags
+
+-chipset drivers (kexts)
+
+--niresh's fixed chipset kexts
+
+**chipset drivers
+
+***NullCPUPowerManagement
+
+-laptop drivers (kexts)
+
+-osx fixes
+
+-other optimizations
 </pre>
 </body>
 </html>
