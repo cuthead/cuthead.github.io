@@ -6,8 +6,6 @@
 </head>
 <body>
 <pre>
-create a bootable installer for os x
-
 sudo /Applications/Install\ macOS\ Sierra.app/contents/resources/createinstallmedia --volume /volumes/MyVolume --applicationpath /Applications/Install\ macOS\ Sierra.app
 
 Install for UEFI booting only
@@ -15,12 +13,10 @@ Install Clover in the ESP
 Drivers64UEFI
 OsxAptioFixDrv-64
 
-install kexts
 diskutil mount disk1s1
 cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 cp RealtekR1000SL.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 
-usb
 # Rename USB devices for OSX 10.11 Support (remember to use injector with this)
 #
 into device label EHC1 set_label begin EH01 end;
@@ -29,44 +25,6 @@ into device label XHC1 set_label begin XHC end;
 into_all all code_regex EHC1 replaceall_matched begin EH01 end;
 into_all all code_regex EHC2 replaceall_matched begin EH02 end;
 into_all all code_regex XHC1 replaceall_matched begin XHC end;
-
-	<key>ACPI</key>
-	<dict>
-		<key>DSDT</key>
-		<dict>
-			<key>Patches</key>
-			<array>
-				<dict>
-					<key>Comment</key>
-					<string></string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string></string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUhDMg==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUgwMg==
-					</data>
-				</dict>
-			</array>
-		</dict>
-	</dict>
 </pre>
 </body>
 </html>

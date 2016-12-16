@@ -6,7 +6,6 @@
 </head>
 <body>
 <pre>
-~/cuthead.github.io
 git init #local branch,fail with github
 git add readme.md
 git commit -m "first commit"
@@ -34,5 +33,26 @@ git remote #list github
 git merge #create and switch to a new branch in fork but not visible
 chown liujianwei -R cuthead.github.io
 chown liujianwei -R .git
+
+how to blog on github.com
+download desktop.github.com
+login github.com,creat cuthead.github.io repository
+git clone https://github.com/cuthead/cuthead.github.io.git
+cd ~/cuthead.github.io
+git config --global user.email "cuthead@icloud.com"
+git config --global user.name "cuthead"
+git add -A
+git commit -m "update"
+git push
+
+how to blog on coding.net
+git config --global user.email "cuthead@icloud.com"
+git config --global push.default simple
+git clone https://git.coding.net/cuthead/cuthead.git
+git pull origin coding-pages
+git checkout -b coding-pages
+git add -A
+git commit -m "update"
+git push -f --set-upstream origin coding-pages
 </pre>
 </html>
