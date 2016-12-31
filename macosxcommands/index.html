@@ -74,7 +74,7 @@ codesign -d --entitlements - example.app
 tar -cvf - ./1.txt | tar -xvf -
 sudo mv "/library/internet plug-ins/default browser.plugin" /
 find . -name cuthead.txt
-pmset -g
+pmset -g assertions
 defaults write -g applepressandholdenabled -bool false
 chmod +x /users/liujianwei/downloads/goagent-goagent-985cbd5/local/goagent-osx.command
 id
@@ -84,6 +84,7 @@ sw_vers
 csrutil status
 dig +trace baidu.com
 dig mx zdnet.com.cn +short
+sudo dd if=/dev/rdiskX of=path/to/file.iso bs=1m
 </pre>
 </body>
 </html>
