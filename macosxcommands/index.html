@@ -85,6 +85,7 @@ csrutil status
 dig +trace baidu.com
 dig mx zdnet.com.cn +short
 sudo dd if=/dev/rdiskX of=path/to/file.dmg bs=1m
+diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://8388608`
 </pre>
 </body>
 </html>

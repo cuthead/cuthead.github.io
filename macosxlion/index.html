@@ -6,24 +6,24 @@
 </head>
 <body>
 <pre>
-download install os x lion.app
-10.7 installesd.dmg md5
-b5d3753c62bfb69866e94dca9336a44a
-create a bootable installer for os x
-open /applications/install mac os x lion.app/contents/sharedsupport/installesd.dmg/basesystem.dmg
-open diskutil,click restore,source select basesystem.dmg,destination select myvolume
-rm /volumes//volumes/mac os x base system 1/system/install/packages/
-cp /applications/install mac os x lion.app/contents/sharedsupport/installesd.dmg/packages /volumes//volumes/mac os x base system 1/system/install/
-cp /applications/install mac os x lion.app/contents/sharedsupport/installesd.dmg/basesystem.dmg/mach_kernel /volumes/mac os x base system 1/
-download clover_v2.3k_r3333.pkg
-clover_v2.3k_r3333.pkg md5
-de19a4e85154e7101e6edaa20e7d6d52
-standard install - change install location - mac os x base system - continue
-customize - install clover in the esp bootloader - install boot0af in mbr cloverefi - cloverefi 64-bits sata
-install
-copy dsdt.aml to /volumes/esp/efi/clover/acpi/patched,copy fakesmc.kext to /volumes/esp/efi/clover/kexts/10.7,config.plist to /volumes/esp/efi/clover/
-install lion
-reboot,press esc,select sandisk,enter,select mac os x base system,select english,until the last second wait for 5 minutes,reboot,press esc,select sandisk,enter,select install os x lion,the last second won't wait for 5 minutes,install complete,repeat usb clover steps to install ssd clover
+open '/Users/cuthead/Downloads/InstallESD.dmg'
+open '/Volumes/Mac OS X Install ESD/BaseSystem.dmg'
+
+open diskutil,click restore,source select Mac OS X Base System,destination select Untitled
+
+rm '/Volumes/Mac OS X Base System 1/System/Installation/Packages'
+cp -R '/Volumes/Mac OS X Install ESD/Packages' '/Volumes/Mac OS X Base System 1/System/Installation/'
+cp '/Volumes/Mac OS X Install ESD/mach_kernel' '/Volumes/Mac OS X Base System 1/'
+
+Install for UEFI booting only
+Install Clover in the ESP
+Drivers64UEFI
+OsxAptioFixDrv-64
+
+cp -R '/Users/cuthead/Downloads/FakeSMC.kext' '/Volumes/EFI/EFI/CLOVER/kexts/10.7'
+cp -R '/Users/cuthead/Downloads/RealtekR1000SL.kext' '/Volumes/EFI/EFI/CLOVER/kexts/10.7'
+
+smbios set to iMac10,1
 </pre>
 </body>
 </html>

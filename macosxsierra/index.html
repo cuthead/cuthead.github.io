@@ -26,13 +26,61 @@ into_all all code_regex EHC1 replaceall_matched begin EH01 end;
 into_all all code_regex EHC2 replaceall_matched begin EH02 end;
 into_all all code_regex XHC1 replaceall_matched begin XHC end;
 
-Why lost respond from keyboard and mouse random on clover and sierra?
-config.plist
-#all option except
-SSDT:Generate
-KernelAndKextPatches:AppleRTC
-SystemParameters:InjectKexts
-fix this problem
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>ACPI</key>
+    <dict>
+      <key>DSDT</key>
+      <dict>
+        <key>Fixes</key>
+        <dict>
+          <key>AddDTGP_0001</key>
+          <true/>
+          <key>FixDarwin_0002</key>
+          <true/>
+          <key>FixDisplay_0100</key>
+          <true/>
+          <key>FixHPET_0010</key>
+          <true/>
+          <key>FixLAN_2000</key>
+          <true/>
+        </dict>
+        <key>Patches</key>
+        <array>
+          <dict>
+            <key>Comment</key>
+            <string>EH01</string>
+            <key>Find</key>
+            <data>RUhDMQ==</data>
+            <key>Replace</key>
+            <data>RUgwMQ==</data>
+          </dict>
+          <dict>
+            <key>Comment</key>
+            <string>EH02</string>
+            <key>Find</key>
+            <data>RUhDMg==</data>
+            <key>Replace</key>
+            <data>RUgwMg==</data>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+    <key>KernelAndKextPatches</key>
+    <dict>
+      <key>AppleRTC</key>
+      <true/>
+    </dict>
+    <key>SystemParameters</key>
+    <dict>
+      <key>InjectKexts</key>
+      <string>Yes</string>
+    </dict>
+  </dict>
+</plist>
+
 </pre>
 </body>
 </html>
