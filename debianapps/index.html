@@ -6,24 +6,7 @@
 </head>
 <body>
 <pre>
-install debian 8.6.0 every option default except write grub to ssd
-su
-vi /etc/apt/sources.list
-a
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie main contrib non-free
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main contrib non-free
-
-deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
-deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
-
-shift-insert
-dpkg --add-architecture i386
-apt-get update
-apt-get install git gstreamer1.0 fcitx fcitx-sunpinyin fcitx-mozc mame openarena torcs flashplugin-nonfree ktorrent unrar nestopia zsnes xboxdrv
+git gstreamer1.0 fcitx fcitx-sunpinyin fcitx-mozc mame openarena torcs flashplugin-nonfree ktorrent unrar xboxdrv
 reboot
 </pre>
 </body>
