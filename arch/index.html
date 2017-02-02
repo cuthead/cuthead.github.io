@@ -27,16 +27,17 @@ systemctl enable gdm
 pacman -S xf86-video-ati
 systemctl start dhcpcd
 systemctl enable dhcpcd
-pacman -S plasma
-pacman -S kde-applications
+pacman -S gnome
 pacman -S wqy-microhei wqy-zenhei
-pacman -S fcitx fcitx-sunpinyin fcitx-im kcm-fcitx
+pacman -S fcitx fcitx-sunpinyin fcitx-im kcm-fcitx fcitx-configtool
 pacman -S flashplugin
 pacman -S dolphin-emu
 pacman -S unrar
 unrar x zelda.rar
 useradd -g users -s /bin/bash -m cuthead
 passwd
+mv 1.iso 2.iso
+pacman -S networkmanager networkmanager-pptp network-manager-applet plasma-nm
 </pre>
 </body>
 </html>
