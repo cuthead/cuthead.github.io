@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8/">
+<title>arch</title>
+</head>
+<body>
+fdisk -l
+cfdisk
+mkfs.ext4 /dev/sda2
+mount /dev/sda2 /mnt
+mkdir -p /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
+nano /etc/pacman.d/mirrorlist
+pacstrap /mnt base
+arch-chroot /mnt
+pacman -S grub-efi-x86_64
+pacman -S efibootmgr
+grub-install --efi-directory=/boot/efi --bootloader-id=grub
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+reboot
+pacman -S xorg-xinit xorg-server
+pacman -S gdm
+systemctl enable gdm
+pacman -S xf86-video-ati
+systemctl start dhcpcd
+systemctl enable dhcpcd
+pacman -S plasma
+pacman -S kde-applications
+pacman -S wqy-microhei wqy-zenhei
+pacman -S fcitx fcitx-sunpinyin fcitx-im kcm-fcitx
+</body>
+</html>
