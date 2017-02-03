@@ -6,7 +6,6 @@
 </head>
 <body>
 <pre>
-
 fdisk -l
 cfdisk
 mkfs.ext4 /dev/sda2
@@ -36,10 +35,12 @@ passwd
 useradd -g users -s /bin/bash -m cuthead
 vi /etc/locale.gen
 locale-gen 
-vi .xprofile
+vim .xprofile
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
+pacman -S networkmanager
+systemctl enable NetworkManager
 
 mv 1.iso 2.iso
 pacman -S flashplugin
