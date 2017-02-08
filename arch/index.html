@@ -28,16 +28,11 @@ systemctl enable gdm
 pacman -S xf86-video-ati
 pacman -S gnome
 pacman -S wqy-microhei wqy-zenhei
-pacman -S fcitx-sunpinyin fcitx-mozc fcitx-im fcitx-configtool
-fcitx-configtool
 passwd
 useradd -g users -s /bin/bash -m cuthead
 vi /etc/locale.gen
 locale-gen
-vim .xprofile
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
+pacman -S ibus-rime
 pacman -S networkmanager networkmanager-pptp
 systemctl enable NetworkManager
 pacman -S flashplugin
