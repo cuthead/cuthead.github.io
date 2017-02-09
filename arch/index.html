@@ -19,20 +19,23 @@ pacman -S grub-efi-x86_64
 pacman -S efibootmgr
 grub-install --efi-directory=/boot/efi --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
-exit
-systemctl start dhcpcd
 systemctl enable dhcpcd
 pacman -S xorg
 pacman -S gdm
 systemctl enable gdm
 pacman -S xf86-video-ati
-pacman -S gnome
+pacman -S plasma kde-applications
 pacman -S wqy-microhei wqy-zenhei
-passwd
 useradd -g users -s /bin/bash -m cuthead
+passwd
 vi /etc/locale.gen
 locale-gen
 pacman -S ibus-rime
+vi .xprofile
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+exit
 pacman -S networkmanager networkmanager-pptp
 systemctl enable NetworkManager
 pacman -S flashplugin
