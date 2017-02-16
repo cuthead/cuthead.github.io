@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>linuxcommands</title>
+</head>
+<body>
+<pre>
+dd if=/home/liujianwei/osx-mavericks.dmg of=/dev/sdb
+dd if=/dev/cdrom of=~/2.iso
+md5sum ~/2.iso
+lsblk
+mkdir liuyanjun
+mount /dev/sda1 liuyanjun
+umount /dev/sda1 liuyanjun
+blkid
+ls -l /dev/disk/by-uuid/
+ls -l /dev/disk/by-label/
+ls -l /dev/disk/by-id/
+ls -l /dev/disk/by-partuuid/
+cfdisk /dev/sdb
+vi /etc/locale.gen
+locale-gen
+vi /etc/sudoers
+liujianwei ALL=(ALL:ALL) ALL
+cd /media/cdrom
+</pre>
+</body>
+</html>

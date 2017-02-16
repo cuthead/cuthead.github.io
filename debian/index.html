@@ -10,6 +10,9 @@ all intel microprocessors work on debian
 
 amd64 build of xserver-xorg-video-ati is slower than windows catalyst
 
+dd if=/home/liujianwei/osx-mavericks.dmg of=/dev/sdb
+does not work in history,works february 16,2017
+
 Audio Setup - Audio Playback - Defer - Built-in Audio Annalog Stere
 
 su
@@ -28,20 +31,6 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/debian-security jessie/updates main 
 
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
 deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ jessie-updates main contrib non-free
-
-dd if=/dev/cdrom of=~/2.iso
-md5sum ~/2.iso
-ls /dev/disk/by-uuid -l
-lsblk
-mkdir liuyanjun
-mount /dev/sda1 liuyanjun
-umount /dev/sda1 liuyanjun
-blkid
-ls -l /dev/disk/by-uuid/
-ls -l /dev/disk/by-label/
-ls -l /dev/disk/by-id/
-ls -l /dev/disk/by-partuuid/
-cfdisk /dev/sdb
 </pre>
 </body>
 </html>
