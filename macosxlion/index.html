@@ -23,7 +23,10 @@ OsxAptioFixDrv-64
 cp -R '/Users/cuthead/Downloads/FakeSMC.kext' '/Volumes/EFI/EFI/CLOVER/kexts/10.7'
 cp -R '/Users/cuthead/Downloads/RealtekR1000SL.kext' '/Volumes/EFI/EFI/CLOVER/kexts/10.7'
 
-smbios set to iMac10,1
+smbios set to MacPro3,1
+
+mkdir /volumes/efi
+sudo mount -t msdos /dev/disk0s1 /volumes/efi
 </pre>
 </body>
 </html>
