@@ -17,14 +17,19 @@ diskutil mount disk1s1
 cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 cp RealtekR1000SL.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
 
+BOOTX64.efi for clover
+FSInject-64.efi for inject kext
+OsxAptioFixDrv-64.efi for UEFI
+VBoxHfs-64.efi for HFS
+FakeSMC.kext in SLE for AppleACPICPU
+FakeSMC.kext in EE for kextd wait AppleACPICPU
+
 # Rename USB devices for OSX 10.11 Support (remember to use injector with this)
 #
 into device label EHC1 set_label begin EH01 end;
 into device label EHC2 set_label begin EH02 end;
-into device label XHC1 set_label begin XHC end;
 into_all all code_regex EHC1 replaceall_matched begin EH01 end;
 into_all all code_regex EHC2 replaceall_matched begin EH02 end;
-into_all all code_regex XHC1 replaceall_matched begin XHC end;
 
           	<dict>
             	<key>Comment</key>
