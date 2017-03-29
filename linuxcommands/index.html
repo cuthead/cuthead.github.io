@@ -7,18 +7,18 @@
 <body>
 <pre>
 dd if=/home/liujianwei/osx-mavericks.dmg of=/dev/sdb
-dd if=/dev/cdrom of=~/2.iso
-md5sum ~/2.iso
+dd if=/dev/cdrom of=~/1.iso
+md5sum ~/1.iso
 lsblk
-mkdir liuyanjun
-mount /dev/sda1 liuyanjun
-umount /dev/sda1 liuyanjun
+sudo mkdir /mnt/efi
+sudo mount /dev/sda1 /mnt/efi
+sudo umount /dev/sda1 /mnt/efi
 blkid
 ls -l /dev/disk/by-uuid/
 ls -l /dev/disk/by-label/
 ls -l /dev/disk/by-id/
 ls -l /dev/disk/by-partuuid/
-cfdisk /dev/sdb
+cfdisk /dev/sda
 vi /etc/locale.gen
 locale-gen
 vi /etc/sudoers
