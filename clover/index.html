@@ -6,7 +6,7 @@
 </head>
 <body>
 <pre>
-10.12.3
+10.12.4
 4035
 cuthead
 EH00=nothing
@@ -16,10 +16,10 @@ CPU=nothing
 iMac12,1=nothing?
 DSDT Patches=?
 FakeCPUID=?
-HPET=live
-mac app store approve usb=?
-mac app store approve Qualcomm=FakeID
-icloud approve Qualcomm=FakeID
+HPET=no crash
+mac app store approve usb=inject usb
+mac app store approve Qualcomm=82540EM+8111E
+icloud approve Qualcomm=82540EM+8111E
 FakeID+RTL=FakeID
 GIGE+SUN=?
 GFX+IGPU=nothing
@@ -29,7 +29,7 @@ RtVariables=smc
 InjectKexts=smc
 AppleRTC=bios
 fast=no option
-wake up from sleep=access mac itunes and airdrop from iphone
+wake up from sleep=access mac itunes by remote itunes by no sleep
 BOOTX64.efi for clover
 OsxAptioFixDrv-64.efi for UEFI
 VBoxHfs-64.efi for HFS
