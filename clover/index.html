@@ -13,16 +13,19 @@ EH00=nothing
 SSDT=nothing
 DSM=nothing
 CPU=nothing
-iMac12,1=nothing?
+iMac12,1=smbios=two below usb ports
 DSDT Patches=?
 FakeCPUID=?
 HPET=no crash
 mac app store approve usb=inject usb
-mac app store approve Qualcomm=82540EM+8111E
-Qualcomm=no fix dsdt
-icloud approve Qualcomm=82540EM+8111E
-FakeID+RTL=FakeID
-GIGE+SUN=?
+iCloud approve Qualcomm=nothing
+RealtekR1000SL.kext=RTL8111E en1 built in=Qualcomm with nothing=reboot
+Mac App Store approve Qualcomm=Qualcomm en0 builtin in=FakeID+RTL8111E(82540EM+RTL8111E)=UEFI+RTL8111E=no GIGE+SUN
+GIGE+SUN(DSDT patches)=Qualcomm en0 builtout=RTL8111E with nothing
+kw=install system kext caches
+finder=rebuild system kext caches
+Sublime Text 2=limit edit
+edit=language keyboard text
 GFX+IGPU=nothing
 PatchVBiosBytes=twice flick clover log in screen
 Entries=unhide
@@ -36,7 +39,6 @@ OsxAptioFixDrv-64.efi for UEFI
 VBoxHfs-64.efi for HFS
 FakeSMC.kext in SLE for AppleACPICPU
 FakeSMC.kext in EE for kextd wait AppleACPICPU
-I will come back to maverricks,in sierra two below usb is dead.
 10.12.4=SwitchResX+Display Maestro+DisableMonitor=ARGB8888+ARGB2101010
 no progress bar=10.12.4
 slice
