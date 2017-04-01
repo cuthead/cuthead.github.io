@@ -7,69 +7,8 @@
 <body>
 <pre>
 create a mac app,click button to change label text?
-create project,click left window button on mainmenu.xib,click window icon on the left,drag push button and label to view controller,use duo code and ui framework with suit icon,ctrl-drag label named myLabel to create iboutlet in appdelegate.h,ctrl-drag button named myButton to create IBAction in appdelegate.m,inner sender enter _myLabel.stringValue=@"love"; to change label text
-
-no visible interface for nsviewcontroller declares the selector viewdidload?
-recreate project in xcode 5
-
-command line tool
-
-#include <stdio.h>
-
-int main()
-{
-
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
-}
-
-#include <ApplicationServices/ApplicationServices.h>
-
-bool MyDisplaySwitchToMode (CGDirectDisplayID display, CFDictionaryRef mode);
-
-int main (int argc, const char * argv[])
-{
-    int	h; 							// horizontal resolution
-    int v; 							// vertical resolution
-    CFDictionaryRef switchMode; 	// mode to switch to
-    CGDirectDisplayID mainDisplay;  // ID of main display
-    
-    CFDictionaryRef CGDisplayCurrentMode(CGDirectDisplayID display);
-    
-    if (argc == 1) {
-        CGRect screenFrame = CGDisplayBounds(kCGDirectMainDisplay);
-        CGSize screenSize  = screenFrame.size;
-        printf("%d %d\n", screenSize.width, screenSize.height);
-        return 0;
-    }
-    if (argc != 3 || !(h = atoi(argv[1])) || !(v = atoi(argv[2])) ) {
-        fprintf(stderr, "ERROR: Use %s horres vertres\n", argv[0]);
-        return -1;
-    }
-    
-    mainDisplay = CGMainDisplayID();
-    
-    switchMode = CGDisplayBestModeForParameters(mainDisplay, 32, h, v, NULL);
-    
-    if (! MyDisplaySwitchToMode(mainDisplay, switchMode)) {
-        fprintf(stderr, "Error changing resolution to %d %d\n", h, v);
-        return 1;
-    }
-    
-    return 0;
-}
-
-bool MyDisplaySwitchToMode (CGDirectDisplayID display, CFDictionaryRef mode)
-{
-    CGDisplayConfigRef config;
-    if (CGBeginDisplayConfiguration(&config) == kCGErrorSuccess) {
-        CGConfigureDisplayMode(config, display, mode);
-        CGCompleteDisplayConfiguration(config, kCGConfigureForSession );
-        return true;
-    }
-    return false;
-}
+create project,click left window button on Main.storyboard,click ViewController on the left,drag push button and label to view controller,use duo code and ui framework with suit icon,ctrl-drag label and button named myLabel and myButton to create IBOutlet in ViewController.h,ctrl-drag button named myButton to create IBAction in ViewController.m,inner sender enter _myLabel.stringValue=@"love"; to change label text
+remove git from xcode to avoid xcode read history code.
 </pre>
 </body>
 </html>
