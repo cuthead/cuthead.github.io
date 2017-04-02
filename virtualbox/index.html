@@ -6,6 +6,9 @@
 </head>
 <body>
 <pre>
+VT-x is disabled in the BIOS for all CPU modes (VERR_VMX_MSR_ALL_VMX_DISABLED).
+enable VT
+
 http://download.virtualbox.org/virtualbox/4.3.36/Oracle_VM_VirtualBox_Extension_Pack-4.3.36-105129.vbox-extpack
 按说这个时候已经搞定了。可是在USB列表里面却没有任何USB设备。
 原来是vbox 所在的用户组比如要包括当前用户才行。
@@ -28,6 +31,7 @@ settings - storage - optical drive - choose virtual optical disk file
 left command
 devices - insert guest additions cd image
 settings - advanced - shared clipboard - bidirectional
+Insert Guest Additions CD image from the Devices menu for no crash in shared folder and reboot.
 </pre>
 </body>
 </html>
