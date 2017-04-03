@@ -9,47 +9,53 @@
 mas 10.12.3 and bit torrent 10.12.3 are the 1:1 same thing except Install macOS Sierra.app/Contents/_MASReceipt because bit torrent 10.12.3 also come from mas by another apple user.If you have Apple ID receipt in Install macOS Sierra.app.and you have Apple brand hardware,Apple can not arrest you.
 10.12.4
 4035
-cuthead
-EH00=nothing
-SSDT=nothing
-DSM=nothing
-CPU=nothing
-iMac12,1=smbios=two below usb ports=working on 10.12=not working on 10.7?
-iMac10,1=smbios=working on 10.7=not working on 10.12?=bad 10.7 installer
-DSDT Patches=?
-FakeCPUID=?
-HPET=no crash
-mac app store approve usb=inject usb
-iCloud approve Qualcomm=nothing
-RealtekR1000SL.kext=RTL8111E en1 built in=reboot
-Mac App Store approve Qualcomm=Qualcomm en0 builtin in
-FakeID+RTL8111E(82540EM+RTL8111E)=UEFI+RTL8111E=nothing
-GIGE+SUN(DSDT patches)=Qualcomm en0 builtout
-kw=install system kext caches
-finder=rebuild system kext caches
-Sublime Text 2=limit edit
-edit=language keyboard text
-GFX+IGPU=nothing
-PatchVBiosBytes=twice flick clover log in screen
-Entries=unhide
-RtVariables=smc
-InjectKexts=smc
-AppleRTC=bios
-fast=no option
-fall sleep with long time=wake up from sleep=access mac itunes by remote itunes=black lcd=clover boot mbr windows 7 wake up from sleep fail
 BOOTX64.efi for clover
 OsxAptioFixDrv-64.efi for UEFI
 VBoxHfs-64.efi for HFS
 FSInject-64.efi for nothing
-busy timeout[0], (240s), kextd wait(0): 'AppleACPICPU'=Reboot and Select proper Boot device or Insert Boot Media in selected Boot device and press a key=clover 4035 installer not UEFI install in sierra volumes create a boot file to boot usb clover to his null folder,install UEFI install and delete not UEFI install sovled this problem.
-busy timeout[0], (60s), kextd wait(0): 'GFX0'=disable iGPU=enable dGPU=enable 10.12.5
+EH00=nothing
+SSDT=nothing
+DSM=nothing
+CPU=nothing
+FakeCPUID=sierra crash
+HPET=sierra no crash
+Mac App Store approve Qualcomm=iCloud approve Qualcomm=Qualcomm en0 builtin in=remove RealtekR1000SL.kext=RTL8111E en1 built out
+FakeID+RTL8111E(82540EM+RTL8111E)=UEFI+RTL8111E=nothing
+GIGE+SUN(DSDT patches)=Qualcomm en0 built out
+Default Boot Volume=LastBootedVolume
+Legacy=PBR
+Timeout=3
+Fast=no option
+Inject USB=Mac App Store approve USB
+Scan=Auto
+PatchVBiosBytes=twice flick clover log in screen
+Entries=unhide
+AppleRTC=bios
+RtVariables=smc
+InjectKexts=smc
+ROM=UseMacAddr0
+MLB=C02032109R5DC771H
+BooterConfig=0x28
+CsrActiveConfig=0x67
+smbios=iMac12,1=two below usb ports=working on 10.12=not working on 10.7?
+smbios=iMac10,1=smbios=working on 10.7=not working on 10.12?=bad 10.7 installer?
+busy timeout[0], (240s), kextd wait(0): 'AppleACPICPU'
+Reboot and Select proper Boot device
+or Insert Boot Media in selected Boot device and press a key
+install clover 4035 to ssd by EFI option,create ssd EFI boot file,does not affect boot usb clover.
+install clover 4035 to usb by UEFI option,delete ssd EFI boot file,does not affect boot usb clover.
+busy timeout[0], (60s), kextd wait(0): 'GFX0'=enable iGPU=disable dGPU=disable 10.12.5=enable GFX+IGPU
+disable or enable realteklan does not matter
 10.12.4=SwitchResX=Display Maestro=DisableMonitor=ARGB8888+ARGB2101010=setgetscreenres
 no progress bar=10.12.4
-disable or enable realteklan does not matter
-my radeon hd 6670 has black log in screen problem in 10.12.3,but apple sovled it in 10.12.4.
+my radeon hd 6670 has black log in screen problem in 10.12.3,but apple solved it in 10.12.4.
 my 10.12.4 the change language from english to chinese and black log in screen problem appear again.
 my 10.12.4 the cursor random disappear in log in screen problem.
 install HWSensors.6.16.1372 success,though install HWSensors.6.16.1372 fail before.
+kw=rebuild system kext caches
+Sublime Text 2=limit edit
+edit=language keyboard text
+fall sleep with long time=wake up from sleep=access mac itunes by remote itunes=black lcd=clover boot mbr windows 7 wake up from sleep fail
 
 slice
 Description
