@@ -20,8 +20,8 @@ Install Clover in the ESP
 Drivers64UEFI
 OsxAptioFixDrv-64
 
-mkdir /volumes/efi
-sudo mount -t msdos /dev/disk0s1 /volumes/efi
+mkdir /Volumes/EFI/
+sudo mount -t msdos /dev/disk1s1 /Volumes/EFI/
 cp -R 'FakeSMC.kext' '/Volumes/EFI/EFI/CLOVER/kexts/10.7'
 
 smbios set to iMac12,1
