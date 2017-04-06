@@ -6,56 +6,14 @@
 </head>
 <body>
 <pre>
-如何更新主板 BIOS?
- 
-由于升级BIOS有一定的风险，不但在执行BIOS 更新步骤时需要多加注意，在升级前的准备工作也很重要喔!
-以下提供几点重要的注意事项供您在升级前参考：
-注意事项1	为避免升级BIOS失败的风险，若您使用目前版本的BIOS没有什么大问题的话，建议您可不用急着更新BIOS，只要保留目前版本即可。如需更新BIOS，请小心的执行，以避免不当的操作而造成系统毁损。
-注意事项2	若您需要更新BIOS时，请再次确认所下载的BIOS更新档所属的主板型号与您的主板型号相符(请至:这里参考辨识方法)，避免使用错误BIOS文件升级造成系统不开机。
-注意事项3	
-如果在您的BIOS选单中，有个叫"BIOS Flash/Write Protection" 的写入保护项目，例：GA-8KNXP BIOS Advanced BIOS Features/BIOS Flash Protection，请确认它不是在"ENABLE"的开启状态。若您的主板有BIOS Flash/Wrote Protection的跳针，请将它设成关闭状态。
+F_PANEL (Front Panel Header)Connect the power switch, reset switch, speaker, and system status indicator on the chassis to this header according to the pin assignments below. Note the positive and negative pins before connectingthe cables.Message/Power/ PowerSleep LED Switch SpeakerF_PANEL(NH) 2 20 1 19Hard Drive Reset Power LED Activity LED Switch Chassis IntrusionHeaderF_AUDIO(H)•DB_PORT•F_PANEL (H61M-D2)MSG/PWR (Message/Power/Sleep LED):System Status LED S0 On S3/S4/S5 OffPW (Power Switch):Connects to the power status indicator on the chassis front panel. The LEDM_SATABIOS Switcher (X58A-OC)is on when the system is operating. The LED is off when the system is in S13/S4 sleep state or powered off (S5).Connects to the power switch on the chassis front panel. You may configure the way to turn off yoursystem using the power switch (refer to Chapter 2, "BIOS Setup," "Power Management Setup," for Voltage measurement module(X58A-OC)more information). • SPEAK (Speaker):PWM Switch (X58A-OC)Connects to the speaker on the chassis front panel. The system reports system startup status by is- suing a beep code. One singlDeIP short beep will be heard if no problem is detected at system startup. Ifa problem is detected, the BIOS may issue beeps in different patterns to indicate the problem. PCIe power•conHnDect(oHr (aSrAdTAD)(rXi5v8eAA-OcCt)ivity LED):Connects to the hard drive activity LED on the chassis front panel. The LED is on when the hard driveis reading or writing data.• RES (Reset Switch):Connects to the reset switch on the chassis front panel. Press the reset switch to restart the computerif the computer freezes and fails to perform a normal restart.• CI (Chassis Intrusion Header):Connects to the chassis intrusion switch/sensor on the chassis that can detect if the chassis cover has been removed. This function requires a chassis with a chassis intrusion switch/sensor.
 
-注意事项4	
-在更新BIOS的过程中，绝对不可以关机或中断更新的动作，以避免造成系统不开机。
+CPU  L3 cache varies with CPUChipset  Memory Intel® H61 Express Chipset2 x 1.5V DDR3 DIMM sockets supporting up to 16 GB of system memory* DuetoWindows32-bitoperatingsystemlimitation,whenmorethan4GBofphysicalmemory is installed, the actual memory size displayed will be less than 4 GB. Dual channel memory architecture Support for DDR3 1333/1066/800 MHz memory modules Support for non-ECC memory modulesOnboard  GraphicsAudio LAN (Go to GIGABYTE's website for the latest supported memory speeds and memory modules.)Chipset:- 1 x D-Sub portSupport for Intel® CoreTM i7 processors/Intel® CoreTM i5 processors/Intel® CoreTM i3 processors/Intel® Pentium® processors/Intel® Celeron® processors in the LGA1155 package(Go to GIGABYTE's website for the latest CPU support list.)Realtek/VIA HD audio codec High Definition Audio 2/4/5.1/7.1-channel* Toconfigure7.1-channelaudio,youhavetouseanHDfrontpanelaudiomoduleand enable the multi-channel audio feature through the audio driver.1 x Atheros GbE LAN chip (10/100/1000 Mbit)Expansion Slots  2 x PCI Express x1 slots1 x PCI Express x16 slot, running at x16Storage Interface  USB Internal  Connectors (All PCI Express slots conform to PCI Express 2.0 standard.)Chipset:- 4 x SATA 3Gb/s connectors supporting up to 4 SATA 3Gb/s devices Chipset:- Up to 8 USB 2.0/1.1 ports (4 ports on the back panel, 4 ports available throughthe internal USB headers)1 x 24-pin ATX main power connector 1 x 4-pin ATX 12V power connector 4 x SATA 3Gb/s connectors 1 x CPU fan header 1 x system fan header 1 x front panel header 1 x front panel audio header 2 x USB 2.0/1.1 headers 1 x parallel port header 1 x serial port header 1 x clearing CMOS jumper- 8-
+Back Panel ConnectorsI/O ControllerHardware MonitorBIOSUnique Features 1 x PS/2 keyboard port  1 x PS/2 mouse port 1 x D-Sub port 4 x USB 2.0/1.1 ports  1 x RJ-45 port 3 x audio jacks (Line In/Line Out/Microphone)  iTE IT8728 chip System voltage detection CPU/System temperature detection  CPU/System fan speed detection CPU fan speed control* Whether the CPU fan speed control function is supported will depend on the CPU cooler you install. 2 x 32 Mbit flash Use of licensed AWARD BIOS Support for DualBIOSTM PnP 1.0a, DMI 2.0, SM BIOS 2.4, ACPI 1.0b  Support for @BIOS Support for Q-Flash Support for Xpress BIOS Rescue Support for Download Center Support for Xpress Install Support for Xpress Recovery2 Support for EasyTune* Available functions in EasyTune may differ by motherboard model.  Support for Smart 6TM Support for Auto Green Support for ON/OFF Charge  Support for Cloud OC Support for 3TB+ Unlock Support for Q-Share Norton Internet Security (OEM version) Support for Microsoft® Windows 7/Vista/XP Micro ATX Form Factor; 22.6cm x 17.4cm
 
-注意事项5	
-若您不幸升级BIOS 失败时，请您就近与店家/经销商或技嘉北中南快服中心联络以利修复BIOS。
+Back Panel ConnectorsPS/2 Keyboard and PS/2 Mouse PortUse the upper port (green) to connect a PS/2 mouse and the lower port (purple) to connect a PS/2 keyboard.D-Sub PortThe D-Sub port supports a 15-pin D-Sub connector. Connect a monitor that supports D-Sub connection to this port.USB 2.0/1.1 PortThe USB port supports the USB 2.0/1.1 specification. Use this port for USB devices such as a USB key- board/mouse, USB printer, USB flash drive and etc.RJ-45 LAN PortThe Gigabit Ethernet LAN port provides Internet connection at up to 1 Gbps data rate. The following describes the states of the LAN port LEDs.Connection/ Speed LEDActivity LEDConnection/Speed LED:State Description Orange 1 Gbps data rate Green 100 Mbps data rate Off 10 Mbps data rateActivity LED:State DescriptionBlinking Data transmission or receiving is occurring Off No data transmission or receiving is occurringLAN PortLine In Jack (Blue)The default line in jack. Use this audio jack for line in devices such as an optical drive, walkman, etc.Line Out Jack (Green)The default line out jack. Use this audio jack for a headphone or 2-channel speaker. This jack can be used to connect front speakers in a 4/5.1/7.1-channel audio configuration.Mic In Jack (Pink)The default Mic in jack. Microphones must be connected to this jack.
 
- 
-BIOS更新工具介绍 :
-技嘉科技提供您三种不同的BIOS升级工具，请依照您目前的系统及主板支持情况选择适当的BIOS升级工具。
- 
-请参考以下的介绍说明：
-	 	Q-Flash是一个隐藏在BIOS Flash ROM里，相当方便的BIOS 升级工具。
- 
-
-工具特色--	Q-Flash工具的特色在于，您只要在开机后进入BIOS 选单，并依照指令(如按”F8”)就能进入Q-Flash工具升级BIOS。完全不用进到操作系统或DOS模式就能升级BIOS。
-注意事项--	使用前要先到技嘉网站下载主板型号所属的BIOS档案，解压缩后将BIOS档案存到一张磁盘片中。
- 
-UEFI - 下载中文使用手册
-下载中文使用手册
- 	 
- 	 	 
-	 	@BIOS是一个在Windows 操作系统下就可执行BIOS 升级动作的工具，您可以至技嘉网站下载此一工具的最新版本。
-工具特色--	@BIOS在线更新功能可帮您找到符合您主板的最新BIOS档，并在Windows 环境下执行更新BIOS动作。
-注意事项--	1. 如果您使用的CPU有支持超执绪技术 (Hyper-Threading Technology)，请先确认在BIOS中关于CPU Hyper-Threading 的选项为”Disable”状态。 
-2. 请先关闭所有的应用程序及常驻程序，如防病毒软件、GWUM、及EasyTune4。 
-3. 请使用从技嘉网站所下载最新版本@BIOS。
-UEFI - 下载中文使用手册
-下载中文使用手册
- 	 
- 	 	 
-DOS BIOS
-升级工具	 	
-为技嘉提供可在DOS模式下使用的BIOS 升级工具，包含在技嘉网站上所提供的BIOS压缩文件里。
-
- 
-
-工具特色--	
-此升级工具(Flash8xx.exe) 可同时用来升级AMI及AWARD 的BIOS。
-
-注意事项--	
-您需准备一片DOS启动盘并将从技嘉网站上所下载并已解压缩的所有档案存到此磁盘中。
+Q-Flash allows the user to quickly and easily upgrade or back up BIOS without entering the operating system.@BIOS is a Windows-based utility that searches and downloads the latest version of BIOS from the Internet and updates the BIOS.
 
 我的主板的rev是什么怎么看啊
 可以在主板左下角白色喷漆字体查看
