@@ -6,21 +6,17 @@
 </head>
 <body>
 <pre>
-download install os x el capitan.app 10.11.4 and clover_v2.3k_r3333.pkg
-sudo /applications/install\ os\ x\ el\ capitan.app/contents/resources/createinstallmedia --volume /volumes/myvolume --applicationpath /applications/install\ os\ x\ el\ capitan.app
-double click clover_v2.3k_r3333.pkg,change install location select liuyanjun0826,customize select install clover in the esp,bootloader,install boot0af in mbr,click install.config.plist use default.csractiveconfig set to 0x67 for disable sip,dsdt rename ehc1 to eh01 for usb problem relate to el capitan,_s3d and shutdown gigabyte dsdt patch for shutdown.
-i use default clover acpi fixes.i also use dsdt patch:local0,shutdown,usb,wak.
-about evga gt 740 sc 2gb graphics card on 10.11.3,if i don't inject nvidia but not install nvidia web drivers,smbios set to macpro3,1,nvda_drv=1,i got random reboot when os x log in.smbios set to imac10,1,nvda_drv=1,i got black screen when os x log in.i have to use inject nvidia and imac10,1 to solve the problem.install nvidia web drivers,smbios set to imac10,1,nvda_drv=1,everything work fine.
-about evga gt 740 sc 2gb graphics card on 10.11.4,i need nv_disable=1 in boot arguments to boot,or i get black screen,maybe 10.11.4 doesn't have my driver.
-about inno3d gtx 260 gold on 10.11.4,use default config.plist,no need manual inject nvidia in boot arguments to boot,clover will auto inject,or i get black screen,maybe 10.11.4 have my driver.
-don’t use minimize config.pist fixhpet fixdarwin fixipic fix_s3d
-copy fakesmc.kext to /volumes/efi/efi/clover/kexts/10.11
-this copy of the install os x el capitan application can't be verified. it may have been corrupted or tampered with during downloading.because it need verify installesd.dmg fail by finder
-10.11.3 installesd.dmg. md5:d0f080d7c7d7560d3dfc22dba572fc0b
-10.11.4 installesd.dmg. md5:1a36088e63612b79a645ec2cff474c5a
-first need install 15 minutes to the last minute,then wait for 15 minutes for the last minutes and reboot to step 2,step 2 install for 15 minutes don’t need wait for another 15 minutes.then reboot install completely
-remove wd 1tb and samsung dvd and evga gt740,whatever replace sata cable doesn't matter,install 10.11.4,click itunes artitst name random disappear.external hdd also disappear randomly,even converter it to portable,seems turn off attack dns problem turn of eist can't solved this problem,safari remove bookmark appear x sign.netease music and kiwix crashed randomly.
-it's clover and dsdt problem.clover auto load usb drive efi folder ignore my ssd efi folder so clover doesn't inject audio id 1.and there is no working dsdt audio id inject patch on internet.now my realtek alc885 works as build in instead of my usb c-media audio card with applealc.
+sudo /Applications/Install\ OS \X\ El\ Capitan.app/contents/resources/createinstallmedia --volume /volumes/MyVolume --applicationpath /Applications/Install\ OS \X\ El\ Capitan.app
+
+Install for UEFI booting only
+Install Clover in the ESP
+Drivers64UEFI
+OsxAptioFixDrv-64
+
+diskutil mount disk1s1
+cp -R 'FakeSMC.kext' '/Volumes/EFI/EFI/CLOVER/kexts/Other'
+
+smbios set to iMac10,1
 </pre>
 </body>
 </html>
