@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>macosxyosemitezone</title>
+</head>
+<body>
+<pre>
+diskutil list
+cutheads-Mac-Pro:~ cuthead$ diskutil unmountdisk disk1
+Unmount of all volumes on disk1 was successful
+cutheads-Mac-Pro:~ cuthead$ sudo dd if=/Users/cuthead/Downloads/Yosemite-Zone.dmg of=/dev/disk1 bs=8192
+651813+1 records in
+651813+1 records out
+5339658867 bytes transferred in 3131.191353 secs (1705312 bytes/sec)
+is wrong
+use pkg or transmac to restore dmg
+
+select customize and select * options,unselect - options
+
+OS X Yosemite 10.10
+*Boot-Loader
+
+**Clover
+
+***Clover UEFI
+
+*Drivers
+
+**FakeSMC
+
+*Chipset Drivers (Kexts)
+
+**Fixed Chipset Kexts
+
+**Chipset Drivers
+
+***NullCPUPowerManagement
+
+can not log in 10.10.5,cursor blink
+</pre>
+</body>
+</html>

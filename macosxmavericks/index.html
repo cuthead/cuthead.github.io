@@ -14,7 +14,9 @@ Drivers64UEFI
 OsxAptioFixDrv-64
 
 diskutil mount disk1s1
-cp FakeSMC.kext /Volumes/ESP/EFI/Clover/Kexts/10.12
+cp -R 'FakeSMC.kext' '/Volumes/EFI/EFI/CLOVER/kexts/Other'
+
+smbios set to iMac10,1
 
 this copy of the install os x mavericks application can't be verified,it may have been corrupted or tampered with during downloading.
 </pre>
