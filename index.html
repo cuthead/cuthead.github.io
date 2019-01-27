@@ -2,13 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Port Edward</title>
+<title>bmi</title>
 </head>
 <body>
-Wishlist<br>
-Donation Please<br>
-<a href="https://item.jd.com/855674.html">Juice</a>
-<a href="https://item.jd.com/941652.html">Sauce</a>
-<a href="https://item.jd.com/987413.html">Beer</a>
+<script>
+function bmi() {
+var height = document.getElementById("height").value;
+var weight = document.getElementById("weight").value;
+var bmicompute = weight * 10000 / (height * height);
+document.getElementById("bmivalue").value = bmicompute.toString().substr(0,4);
+}
+</script>
+height<br>
+<input type="text" id="height">cm<br>
+weight<br>
+<input type="text" id="weight">kg<br>
+bmi<br>
+<input type="text" id="bmivalue"><br>
+<button onclick="bmi()">compute</button>
 </body>
 </html>
